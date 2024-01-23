@@ -1,0 +1,23 @@
+
+Notes for Dudley - 
+
+Perhaps instead of swipe, it's normal click for left (red) "box" and right-click for right (black) "box".
+The animation is going to be QUITE difficult and is very much a grade 12 topic, especially considering we only just learned loops and arrays. I propose a slightly different take on the game that will utilize a table of squares (grid) where images will randomly appear and you have to click or right-click to move them to the correct box. If you take too long, they explode.
+
+This will limit the learning to timers instead of timers, animation, graphics, physics, etc...
+
+  @	#	#	#
+
+  #	@	&	#
+
+  #	#	#	#
+
+  #	#	#	#
+
+  #	&	#	#
+
+
+Come talk to me so we can discuss.
+
+~ Mr. Brash
+

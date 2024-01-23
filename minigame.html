@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Count The Bombs!</title>
+  <link rel="icon" type="image/x-icon" href="./Assets/Misc/favicon2.png">
+  <style type="text/css">
+    canvas {
+      display: block;
+      border: 4px solid black;
+      background: url("./Assets/Misc/bg.jpg") position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+    body {
+      background-color: #ADD8E6;
+      background-attachment: fixed;
+    }
+  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script src="minigame.js" defer></script>
+
+</head>
+
+<body>
+  <button type="submit" onClick="refreshPage()">Refresh Button</button>
+   <h1> CORRECT GUESSES: <span id="guess_score"> 0 </span> </h1> 
+  <form onsubmit="checkGuess(event)">
+    <div>
+      <p>How Many Bombs?</p>
+      <input type="number" min="1" max="20" inputmode="numeric">
+    </div>
+    <button type="submit">Enter Guess</button>
+  </form>
+
+  <center><canvas id="gameCanvas"></canvas></center>
+</body>
+</html>

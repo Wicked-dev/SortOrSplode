@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sort or 'Splode</title>
+  <link rel="icon" type="image/x-icon" href="./Assets/Misc/favicon.png">
+  <style type="text/css">
+    canvas {
+      display: block;
+      border: 4px solid black;
+      background: url("./Assets/Misc/bg.jpg") position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+    body {
+      background-color: #ADD8E6
+      background-attachment: fixed;
+    }
+  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script src="script.js" defer></script>
+  <script src="canvas.js" defer></script>
+
+   <!-- <link rel="preload" href="./Assets/Misc/bg.jpg"
+  <link rel="preload" href="./Assets/Sprites/blackbox.png"
+     <link rel="preload" href="./Assets/Sprites/redbox.png" -->
+</head>
+
+<body>
+  <div class="audio">
+    <audio id="gameAudio" autoplay>
+      <source src="./Assets/Audio/game_music.mp3">
+    </audio>
+  </div>
+
+  <img id="muteButton" src="./Assets/Audio/unmute.png" alt="unmute" onclick="toggleMute()" width=50px height=50px>
+  </img>
+
+  <img id="blackbomb" src="./Assets/Sprites/black_bomb.png" width=50px height=25px>
+  <img id="redbomb" src="./Assets/Sprites/red_bomb.png" width=50px height=25px>
+
+  <script>
+    let audio = document.getElementById("gameAudio");
+    let muteButton = document.getElementById("muteButton");
+    function toggleMute() {
+      if (audio.paused) {
+        audio.play();
+        muteButton.src = "./Assets/Audio/unmute.png";
+      } else {
+        audio.pause();
+        muteButton.src = "./Assets/Audio/mute.png";
+      }
+    }
+
+  </script>
+  <h1> SCORE: <span id="game_score"> 0 </span> </h1>
+  <script>
+  function myFunction() {
+    var x = document.getElementById("game_score");
+    x.style.WebkitUserSelect = "none"; // Safari
+    x.style.msUserSelect = "none"; // IE 10 and IE11
+    x.style.userSelect = "none"; // Standard syntax
+  }
+    window.onload = function() {
+      myFunction();
+    }
+  </script>
+  <center><canvas id="gameCanvas" width="776" height="373"></canvas></center>
+</body>
+</html>
